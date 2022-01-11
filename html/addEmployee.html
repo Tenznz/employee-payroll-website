@@ -47,12 +47,41 @@
                 <input type="radio" id="profile4" name="profile" value="../assets/profile-images/Ellipse -7.png" required>
                 <img class="profile" id="image4" src="../assets/profile-images/Ellipse -7.png">
                 </label>
-
-
-
                 </div>
+            </div>
+
+            <div class="row-content">
+                <label class="label text" for="gender"></label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label class="text" for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label class="text" for="female">Female</label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="department">Department</label>
+                <div>
+                    <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                    <label class="text" for="hr">HR</label>
+                    <input class="checkbox" type="checkbox" id="sales" name="sales" value="sales">
+                    <label class="text" for="sales">Sales</label>
+                    <input class="checkbox" type="checkbox" id="finance" name="finance" value="finance">
+                    <label class="text" for="finance">Finance</label>
+                    <input class="checkbox" type="checkbox" id="Engineer" name="Engineer" value="Engineer">
+                    <label class="text" for="Engineer">Engineer</label>
+                    <input class="checkbox" type="checkbox" id="Others" name="Others" value="Others">
+                    <label class="text" for="Others">Others</label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="salary">Choose your salary: </label>
+                <input class="input" type="range" id="salary" name="salary" min="300000" max="400000" step="100" value="400000">
+                <output class="salary-output " for="salary">400000</output>
+            </div>
+
         </form>
-        </div>
+    </div>
 
 </body>
 
