@@ -21,11 +21,12 @@
     </header>
 
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save();return false">
+        <form class="form" action="#" onsubmit="save(event);return false" onreset="salaryReset();">
             <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" id="name" placeholder="Your name.. " required>
+                <error-output class="text-error" for="name"></error-output>
             </div>
 
             <div class="row-content">
@@ -153,13 +154,15 @@
                 <a href="./home.html" class="resetButton button cancelButton">Cancel</a>
                 <div class="submit-reset">
                     <button type="submit" class="button submitButton" id="submitButton">Submit</button>
-                    <button type="reset" class="resetButton button button">Reset</button>
+                    <button type="reset" class="resetButton button">Reset</button>
                 </div>
             </div>
 
         </form>
     </div>
-    <script src="../js/salarySlide.js"></script>
+    <script type="text/javascript" src="../js/EmployeePayroll.js"></script>
+    <script type="text/javascript" src="../js/EmployeePayrollData.js"></script>
+
 
 </body>
 
