@@ -44,7 +44,6 @@ function validateDate() {
     day.addEventListener('input', checkDate);
     month.addEventListener('input', checkDate);
     year.addEventListener('input', checkDate);
-
 }
 const salaryOutput = () => {
     const salary = document.querySelector('#salary');
