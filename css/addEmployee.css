@@ -114,6 +114,10 @@ label {
     padding: 0px;
 }
 
+.salary-output {
+    color: #42515f;
+}
+
 .profile-radio-content {
     display: flex;
     flex-direction: row;
