@@ -114,3 +114,36 @@ const getInputElementValue = (id) => {
     let value = document.getElementsById(id).value;
     return value;
 }
+const resetForm = () => {
+    console.log("resetting...");
+    setValue('#name', '');
+    const nameError = document.querySelector(".text-error");
+    nameError.textContent = '';
+    unsetSelectedValues('[name=profile]');
+    unsetSelectedValues('[name=gender]');
+    unsetSelectedValues('[name=department]');
+    setValue('#salary', '400000');
+    const output = document.querySelector('.salary-output');
+    output.textContent = '400000';
+    setValue('#notes', '');
+    setValue('#day', 'day');
+    setValue('#month', 'month');
+    setValue('#year', 'year');
+    const dateError = document.querySelector('#startDate');
+    dateError.textContent = ''
+
+}
+const unsetSelectedValues = (propertyValue) => {
+    let allItems = document.querySelectorAll(propertyValue);
+    allItems.forEach(item => {
+        item.checked = false;
+    });
+}
+const setTextValue = (id, value) => {
+    const element = document.querySelector(id);
+    element.value = value;
+}
+const setValue = (id, value) => {
+    const element = document.querySelector(id);
+    element.value = value;
+}
