@@ -21,7 +21,7 @@
     </header>
 
     <div class="form-content">
-        <form class="form" action="#" onsubmit="save(event);return false">
+        <form class="form" action="#" onsubmit="save();return false">
             <div class="form-head">Employee Payroll form</div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
@@ -63,15 +63,15 @@
             <div class="row-content">
                 <label class="label text" for="department">Department</label>
                 <div>
-                    <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+                    <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
                     <label class="text" for="hr">HR</label>
-                    <input class="checkbox" type="checkbox" id="sales" name="sales" value="sales">
+                    <input class="checkbox" type="checkbox" id="sales" name="department" value="sales">
                     <label class="text" for="sales">Sales</label>
-                    <input class="checkbox" type="checkbox" id="finance" name="finance" value="finance">
+                    <input class="checkbox" type="checkbox" id="finance" name="department" value="finance">
                     <label class="text" for="finance">Finance</label>
-                    <input class="checkbox" type="checkbox" id="Engineer" name="Engineer" value="Engineer">
+                    <input class="checkbox" type="checkbox" id="Engineer" name="department" value="Engineer">
                     <label class="text" for="Engineer">Engineer</label>
-                    <input class="checkbox" type="checkbox" id="Others" name="Others" value="Others">
+                    <input class="checkbox" type="checkbox" id="Others" name="department" value="Others">
                     <label class="text" for="Others">Others</label>
                 </div>
             </div>

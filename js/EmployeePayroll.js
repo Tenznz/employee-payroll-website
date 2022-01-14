@@ -53,3 +53,51 @@ const salaryOutput = () => {
         output.textContent = salary.value;
     });
 }
+const save = () => {
+    console.log("Saving")
+    try {
+        let EmployeePayrollData = createEmployeePayroll();
+    } catch (e) {
+        return;
+    }
+}
+
+const createEmployeePayroll = () => {
+    let employeePayrollData = new EmployeePayrollData();
+    try {
+        employeePayrollData.name = getInputValueById('#name');
+    } catch (e) {
+        setTextValue('.text-error', e);
+        throw e;
+    }
+    employeePayrollData._profilePic = getSelectedValues('[name=profile]').pop();
+    employeePayrollData._gender = getSelectedValues('[name=gender]').pop();
+    employeePayrollData._department = getSelectedValues('[name=department]');
+    employeePayrollData._salary = getInputValueById('#salary');
+    employeePayrollData._note = getInputValueById('#notes');
+    let date = getInputValueById('#day') + " " + getInputValueById('#month') + " " + getInputValueById('#year');
+    employeePayrollData._startDate = Date.parse(date);
+    console.log(employeePayrollData._startDate);
+    alert(employeePayrollData.toString());
+    console.log(employeePayrollData.toString)
+    return employeePayrollData;
+}
+
+const getSelectedValues = (propertyValue) => {
+    let allItems = document.querySelectorAll(propertyValue);
+    let setItems = [];
+    allItems.forEach(item => {
+        if (item.checked) setItems.push(item.value);
+    });
+    return setItems;
+}
+
+const getInputValueById = (id) => {
+    let value = document.querySelector(id).value;
+    return value;
+}
+
+const getInputElementValue = (id) => {
+    let value = document.getElementsById(id).value;
+    return value;
+}
