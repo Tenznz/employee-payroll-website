@@ -59,7 +59,7 @@ const save = () => {
         let employeePayrollData = createEmployeePayroll();
         createAndUpdateStorage(employeePayrollData);
     } catch (e) {
-        return;
+        console.log(e);
     }
 }
 
@@ -71,16 +71,23 @@ const createEmployeePayroll = () => {
         setTextValue('.text-error', e);
         throw e;
     }
+    employeePayrollData._id = new Date().getTime();
     employeePayrollData._profilePic = getSelectedValues('[name=profile]').pop();
     employeePayrollData._gender = getSelectedValues('[name=gender]').pop();
     employeePayrollData._department = getSelectedValues('[name=department]');
     employeePayrollData._salary = getInputValueById('#salary');
     employeePayrollData._note = getInputValueById('#notes');
     let date = getInputValueById('#day') + " " + getInputValueById('#month') + " " + getInputValueById('#year');
-    employeePayrollData._startDate = Date.parse(date);
+    try {
+        employeePayrollData.startDate = new Date(date);
+    } catch (error) {
+        setTextValue('#startDate', error);
+        throw error;
+    }
+
     console.log(employeePayrollData._startDate);
     alert(employeePayrollData.toString());
-    console.log(employeePayrollData.toString)
+    console.log(employeePayrollData.toString());
     return employeePayrollData;
 }
 
@@ -130,7 +137,7 @@ const resetForm = () => {
     setValue('#month', 'month');
     setValue('#year', 'year');
     const dateError = document.querySelector('#startDate');
-    dateError.textContent = ''
+    dateError.textContent = '';
 
 }
 const unsetSelectedValues = (propertyValue) => {
