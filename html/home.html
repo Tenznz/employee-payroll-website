@@ -7,12 +7,12 @@
     <link href="https://fonts.googleapis.com/css2?familly=Roboto:wght@300;400;500;600&dispay=swap" rel="stylesheet">
     <title>Employee payroll form</title>
     <link rel="stylesheet" href="../css/home.css">
+    <script defer src="../js/home.js"></script>
 </head>
 
 <body>
     <header class="header-content header">
         <div class="logo-content">
-
             <img src="../assets/images/logo.png" alt="">
             <div>
                 <span class="emp-text">EMPLOYEE</span><br>
@@ -20,43 +20,18 @@
             </div>
         </div>
     </header>
-
     <div class="main-content">
         <div class="header-content">
             <div class="emp-detail-text">
                 Employee Details
-                <div class="emp-count">10</div>
+                <div class="emp-count"></div>
             </div>
             <a href="./AddEmployee.html" class="add-button">
                 <img src="../assets/icons/add-24px.svg" alt="">Add User</a>
         </div>
         <div class="table-main">
+            <table id="table-display" class="table">
 
-            <table id="display" class="table">
-                <tr>
-                    <th></th>
-                    <th>Name</th>
-                    <th>Gender</th>
-                    <th>Department</th>
-                    <th>Salary</th>
-                    <th>Start Date</th>
-                    <th>Actions</th>
-                </tr>
-                <tr>
-                    <td><img class="profile" alt="" src="../assets/profile-images/Ellipse -2.png"></td>
-                    <td>Tenzing</td>
-                    <td>Male</td>
-                    <td>
-                        <div class='dept-label'>HR</div>
-                        <div class='dept-label'>Finance</div>
-                    </td>
-                    <td>3000000</td>
-                    <td>1 Nov 2020</td>
-                    <td>
-                        <img id="1" onclick="remove(this)" alt="delete" src="../assets/icons/delete-black-18dp.svg">
-                        <img id="1" alt="edit" onclick="update(this)" src="../assets/icons/create-black-18dp.svg">
-                    </td>
-                </tr>
             </table>
         </div>
     </div>

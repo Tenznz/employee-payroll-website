@@ -133,9 +133,9 @@ const resetForm = () => {
     const output = document.querySelector('.salary-output');
     output.textContent = '400000';
     setValue('#notes', '');
-    setValue('#day', 'day');
-    setValue('#month', 'month');
-    setValue('#year', 'year');
+    setValue('#day', '');
+    setValue('#month', '');
+    setValue('#year', '');
     const dateError = document.querySelector('#startDate');
     dateError.textContent = '';
 
