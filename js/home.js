@@ -19,9 +19,7 @@ const createInnerHtml = () => {
                 <td><img class="profile" alt="" src="${empPayrollData._profilePic}"></td>
                 <td>${empPayrollData._name}</td>
                 <td>${empPayrollData._gender}</td>
-                <td>
-                    <div class='dept-label'>${getDepartment(empPayrollData._department)}</div>
-                </td>
+                <td>${getDepartment(empPayrollData._department)}</td>
                 <td>${empPayrollData._salary}</td>
                 <td>${stringifyDate(empPayrollData._startDate)}</td>
                 <td>
