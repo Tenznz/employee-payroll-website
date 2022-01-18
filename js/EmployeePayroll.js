@@ -57,6 +57,7 @@ const save = () => {
     console.log("Saving")
     try {
         let employeePayrollData = createEmployeePayroll();
+        resetForm();
         createAndUpdateStorage(employeePayrollData);
     } catch (e) {
         console.log(e);
